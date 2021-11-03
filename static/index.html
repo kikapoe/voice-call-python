@@ -1,16 +1,96 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NOAH:function_Click2Call</title>
-    <link rel="stylesheet" href="static/site.css" />
+    <style>
+
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+      
+      .block {
+        display: block;
+        width: 100%; 
+        border: none;
+      //  background-image: linear-gradient(to bott, #6f6965, #fe4a40 );
+        background-color: #04AA6D;
+        border-radius: 25px;
+        color: white;
+        padding: 14px 28px;
+        font-size: 48px;
+        cursor: pointer;
+        text-align: center;
+      }
+      
+      .block:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        padding: 10px;
+        height:550px;
+      }
+      
+      .grid-container > div {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+      
+      .item1 {
+        grid-column-end: 1;
+      }
+      
+      .btn1 {
+        grid-column-end: 2;
+      }
+      
+      .btn-block{
+        display: block; 
+        width: 50%; 
+        height: 30%;
+        border: none; 
+        background-color: #04AA6D;
+        border-radius: 25px;
+        color: white;
+        padding: 40px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+      }
+      
+      .topic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+      }
+      
+      .ss {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        height: 1000;
+        width: 1000;
+      }
+      
+      </style>
   </head>
   <body>
     <header>
-      <h1>NOAH:function_Click2Call</h1>
-      <button id="startup-button">init() all Devices</button>
+      <button id="startup-button">init()</button>
     </header>
+  <h2 class="topic">SELECT THE DEPARTMENT</h2>
+
     <main id="controls">
-      <section class="left-column" id="info">
+      <section class="left-column" id="info" style="display:none">
         <h2>Checking: Device Info</h2>
         <div id="client-name"></div>
         <div id="output-selection" class="hide">
@@ -25,17 +105,50 @@
         </div>
       </section>
       <section class="center-column">
-        <h2 class="instructions">Make a Call</h2>
+        <div class="grid-container">
+          <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/>
+          <button id="button-call" type="submit" class="item1 block">ACC</button>
+
+          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
+          <button id="button-call" type="submit" class="item2 block">APQP</button>
+
+          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
+          <button id="button-call" type="submit" class="item3 block">BPD</button>
+
+          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
+          <button id="button-call" type="submit" class="item4 block">CED</button>
+
+          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
+          <button id="button-call" type="submit" class="item5 block">CGD</button>
+
+          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
+          <button id="button-call" type="submit" class="item6 block">EXE</button>
+
+          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
+          <button id="button-call" type="submit" class="item7 block">GAD</button>
+
+          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
+          <button id="button-call" type="submit" class="item8 block">GDC</button>
+
+          <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/>
+          <button id="button-call" type="submit" class="item9 block">HRM</button>
+
+          <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/>
+          <button class="item10 block">ICT</button>
+
+          <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/>
+          <button class="item11 block">LGS</button>
+
+          <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/>
+          <button class="item12 block">MAD</button>
+        </div>
         <div id="call-controls" class="hide">
-          <form>
-            <label for="phone-number"
-              >Enter a phone number {Defaul = Calling "Pote"}</label
-            >
+          <form style="display:none">
             <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" />
             <button id="button-call" type="submit">Call</button>
           </form>
           <button id="button-hangup-outgoing" class="hide">Hang Up</button>
-          <div id="incoming-call" class="hide">
+          <div id="incoming-call" class="hide" style="display:none">
             <h2>Incoming Call Controls</h2>
             <p class="instructions">
               Incoming Call from <span id="incoming-number"></span>
@@ -44,7 +157,7 @@
             <button id="button-reject-incoming">Reject</button>
             <button id="button-hangup-incoming" class="hide">Hangup</button>
           </div>
-          <div id="volume-indicators" class="hide">
+          <div id="volume-indicators" class="hide" style="display:none">
             <label>Mic Volume</label>
             <div id="input-volume"></div>
             <br /><br />
@@ -53,9 +166,9 @@
           </div>
         </div>
       </section>
-      <section class="right-column">
+      <section class="right-column" style="display:none">
         <h2>Event Log</h2>
-        <div class="hide" id="log" style="display:none"></div>
+        <div class="hide" id="log" ></div>
       </section>
     </main>
 

@@ -1,4 +1,6 @@
-﻿$(function () {
+﻿
+
+$(function () {
   const speakerDevices = document.getElementById("speaker-devices");
   const ringtoneDevices = document.getElementById("ringtone-devices");
   const outputVolumeBar = document.getElementById("output-volume");
@@ -22,12 +24,18 @@
   );
   const phoneNumberInput = document.getElementById("phone-number");
   const incomingPhoneNumberEl = document.getElementById("incoming-number");
-  const startupButton = document.getElementById("startup-button");
-
+  const startupButton = document.getElementById("startup-button"); //need to click on load
+ 
   let device;
   let token;
 
   // Event Listeners
+
+  //document.onload = function(){
+    //const startupButton = document.getElementById("startup-button"); //need to click on load
+    //$('#startupButton').click();
+    //console.log('sdads');
+  //}
 
   callButton.onclick = (e) => {
     e.preventDefault();
