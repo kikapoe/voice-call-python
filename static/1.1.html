@@ -169,14 +169,10 @@
       height: 50px;
       width: auto;
     }
-
-    body {
-      overflow: hidden;
-    }
   </style>
 </head>
 
-<body> 
+<body>
   <div id="topic" class="header-topic">
     <img id="btkk-logo" src="static/logo.png">
     <div class="vl"></div>
@@ -278,10 +274,10 @@
 
   <!-- Init button is here !! -->
   <header>
-    <button id="startup-button" style="display: none">Start up the Device</button>
+    <button id="startup-button" >Start up the Device</button>
   </header>
   <main id="controls">
-    <section class="left-column" id="info" style="display: none">
+    <section class="left-column" id="info">
       <h2>Your Device Info</h2>
       <div id="client-name"></div>
       <div id="output-selection" class="hide">
@@ -292,7 +288,7 @@
         <button id="get-devices" >Seeing "Unknown" devices?</button>
       </div>
     </section>
-    <section class="center-column" style="display: none">
+    <section class="center-column">
       <h2 class="instructions">Make a Call</h2>
       <div id="call-controls" class="hide">
         <form>
@@ -318,7 +314,7 @@
         </div>
       </div>
     </section>
-    <section class="right-column" style="display: none">
+    <section class="right-column">
       <h2>Event Log</h2>
       <div class="hide" id="log"></div>
     </section>
@@ -543,7 +539,7 @@
           outgoingCallHangupButton.onclick = () => {
             log("Hanging up ...");
             call.disconnect();
-            window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            window.open('https://localhost:5000','_blank').focus();
             close();
             
             
