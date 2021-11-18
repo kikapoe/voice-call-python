@@ -194,21 +194,20 @@
             <img class="arrow" src="static/left-arrow.png" alt="">
           </div>
           <!-- #check list -->
-          <!-- Ok this ACC is working -->
+          <!-- Ok this row is working -->
           <input id="phone-number" type="text" value="+66908916039" style="display:none" />
           <button id="button-call" type="submit" class="block">ACC</button>
-
-          <button class=" block">APQP</button>
-          <button class=" block">BPD</button>
-          <button class=" block">CED</button>
-          <button class=" block">CGD</button>
-          <button class=" block">EXE</button>
-          <button class=" block">GAD</button>
-          <button class=" block">GDC</button>
-          <button class=" block">HRM</button>
-          <button class=" block">ICT</button>
-          <button class=" block">LGS</button>
-          <button class=" block">MAD</button>
+          <button id ="APQP" class=" block">APQP</button>
+          <button id ="BPD" class=" block">BPD</button>
+          <button id ="CED" class=" block">CED</button>
+          <button id ="CGD" class=" block">CGD</button>
+          <button id ="EXE" class=" block">EXE</button>
+          <button id ="GAD" class=" block">GAD</button>
+          <button id ="GDC" class=" block">GDC</button>
+          <button id ="HRM" class=" block">HRM</button>
+          <button id ="ICT" class=" block">ICT</button>
+          <button id ="LGS" class=" block">LGS</button>
+          <button id ="MAD" class=" block">MAD</button>
           <div class=" item-b">
             <img class="arrow" src="static/right-arrow.png" alt="">
           </div>
@@ -219,18 +218,19 @@
           <div class=" item-a ">
             <img class="arrow" src="static/left-arrow.png" alt="">
           </div>
-          <button class=" block" onclick="dial()">MTN</button>
-          <button class=" block">PCS</button>
-          <button class=" block">PED</button>
-          <button class=" block">PCL</button>
-          <button class=" block">PSD</button>
-          <button class=" block">PUR</button>
-          <button class=" block">QAD</button>
-          <button class=" block">QCD</button>
-          <button class=" block">QMS</button>
-          <button class=" block">RND</button>
-          <button class=" block">SHE</button>
-          <button class=" block">SNM</button>
+          <!--MTN  PCS PED PCL PSD PUR QAD QCD QMS RND SHE SNM-->
+          <button id="MTN" class=" block">MTN</button>
+          <button id="PCS" class=" block">PCS</button>
+          <button id="PED" class=" block">PED</button>
+          <button id="PCL" class=" block">PCL</button>
+          <button id="PSD" class=" block">PSD</button>
+          <button id="PUR" class=" block">PUR</button>
+          <button id="QAD" class=" block">QAD</button>
+          <button id="QCD" class=" block">QCD</button>
+          <button id="QMS" class=" block">QMS</button>
+          <button id="RND" class=" block">RND</button>
+          <button id="SHE" class=" block">SHE</button>
+          <button id="SNM" class=" block">SNM</button>
           <div class=" item-b">
             <img class="arrow" src="static/right-arrow.png" alt="">
           </div>
@@ -241,15 +241,16 @@
           <div class=" item-a ">
             <img class="arrow" src="static/left-arrow.png" alt="">
           </div>
-          <button class=" block" onclick="dial()">TLD</button>
-          <button class=" block">TPM</button>
-          <button class=" block">UTT</button>
-          <button class=" block">PD1</button>
-          <button class=" block">PD2</button>
-          <button class=" block">PD3</button>
-          <button class=" block">PD4</button>
-          <button class=" block">PD5</button>
-          <button class=" block">PD7</button>
+          <!-- TLD TPM  UTT PD1 PD2 PD3 PD4 PD5 PD7-->
+          <button id="TLD" class=" block">TLD</button>
+          <button id="TPM" class=" block">TPM</button>
+          <button id="UTT" class=" block">UTT</button>
+          <button id="PD1" class=" block">PD1</button>
+          <button id="PD2" class=" block">PD2</button>
+          <button id="PD3" class=" block">PD3</button>
+          <button id="PD4" class=" block">PD4</button>
+          <button id="PD5" class=" block">PD5</button>
+          <button id="PD7" class=" block">PD7</button>
           <div class=" item-b">
             <img class="arrow" src="static/right-arrow.png" alt="">
           </div>
@@ -389,7 +390,46 @@
 
     $(function () {
 
+      // get varable all buttons
+      // <!-- APQP BPD CED CGD EXE GAD GDC HRM ICT LGS MAD-->
+      const APQP = document.getElementById("APQP");
+      const BPD = document.getElementById("BPD");
+      const CED = document.getElementById("CED");
+      const CGD = document.getElementById("CGD");
+      const EXE = document.getElementById("EXE");
+      const GAD = document.getElementById("GAD");
+      const GDC = document.getElementById("GDC");
+      const HRM = document.getElementById("HRM");
+      const ICT = document.getElementById("ICT");
+      const LGS = document.getElementById("LGS");
+      const MAD = document.getElementById("MAD");
 
+      // <!--MTN  PCS PED PCL PSD PUR QAD QCD QMS RND SHE SNM-->
+      const MTN = document.getElementById("MTN");
+      const PCS = document.getElementById("PCS");
+      const PED = document.getElementById("PED");
+      const PCL = document.getElementById("PCL");
+      const PSD = document.getElementById("PSD");
+      const PUR = document.getElementById("PUR");
+      const QAD = document.getElementById("QAD");
+      const QCD = document.getElementById("QCD");
+      const QMS = document.getElementById("QMS");
+      const RND = document.getElementById("RND");
+      const SHE = document.getElementById("SHE");
+      const SNM = document.getElementById("SNM");
+
+      // <!-- TLD TPM  UTT PD1 PD2 PD3 PD4 PD5 PD7-->
+      const TLD = document.getElementById("TLD");
+      const TPM = document.getElementById("TPM");
+      const UTT = document.getElementById("UTT");
+      const PD1 = document.getElementById("PD1");
+      const PD2 = document.getElementById("PD2");
+      const PD3 = document.getElementById("PD3");
+      const PD4 = document.getElementById("PD4");
+      const PD5 = document.getElementById("PD5");
+      const PD7 = document.getElementById("PD7");
+   
+      // varaiables other buttons
       const speakerDevices = document.getElementById("speaker-devices");
       const ringtoneDevices = document.getElementById("ringtone-devices");
       const outputVolumeBar = document.getElementById("output-volume");
@@ -419,17 +459,171 @@
       let token;
 
       // Event Listeners
-
-      //document.onload = function(){
-      //const startupButton = document.getElementById("startup-button"); //need to click on load
-      //$('#startupButton').click();
-      //console.log('sdads');
-      //}
-
+      // <!-- APQP BPD CED CGD EXE GAD GDC HRM ICT LGS MAD-->
       callButton.onclick = (e) => {
         e.preventDefault();
         makeOutgoingCall();
       };
+
+      APQP.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+
+      BPD.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      CED.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      EXE.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      GAD.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      GDC.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      HRM.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      ICT.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      LGS.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      MAD.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+    // <!--MTN  PCS PED PCL PSD PUR QAD QCD QMS RND SHE SNM-->
+      MTN.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      PCS.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      PED.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+      
+      PCL.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      PSD.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      PUR.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      QAD.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      QCD.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      QMS.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      RND.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+      
+      SHE.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+      SNM.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+
+     // <!-- TLD TPM  UTT PD1 PD2 PD3 PD4 PD5 PD7-->
+      TLD.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+      
+      TPM.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+      
+      UTT.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall(); 
+      };
+      
+      PD1.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+      
+      PD2.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+      
+      PD3.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+      
+      PD4.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+      
+      PD5.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+      
+      PD7.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+
+
       getAudioDevicesButton.onclick = getAudioDevices;
       speakerDevices.addEventListener("change", updateOutputDevice);
       ringtoneDevices.addEventListener("change", updateRingtoneDevice);
@@ -542,9 +736,10 @@
           outgoingCallHangupButton.onclick = () => {
             log("Hanging up ...");
             call.disconnect();
-            window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
             close();
-            
             
           };
 
