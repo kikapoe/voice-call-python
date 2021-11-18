@@ -1,6 +1,10 @@
-﻿
+﻿$(document).ready(function(){
+  $('#some-id').trigger('click');
+});
 
 $(function () {
+
+
   const speakerDevices = document.getElementById("speaker-devices");
   const ringtoneDevices = document.getElementById("ringtone-devices");
   const outputVolumeBar = document.getElementById("output-volume");
@@ -48,6 +52,8 @@ $(function () {
   // SETUP STEP 1:
   // Browser client should be started after a user gesture
   // to avoid errors in the browser console re: AudioContext
+  
+  //window.onload = (startupClient);
   startupButton.addEventListener("click", startupClient);
 
   // SETUP STEP 2: Request an Access Token
@@ -114,6 +120,9 @@ $(function () {
       // get the phone number to call from the DOM
       To: phoneNumberInput.value,
     };
+
+    
+  
 
     if (device) {
       log(`Attempting to call ${params.To} ...`);

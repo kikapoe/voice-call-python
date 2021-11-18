@@ -3,9 +3,11 @@
 import os
 import re
 
+from flask.templating import render_template
+
 from dotenv import load_dotenv
 from faker import Faker
-from flask import Flask, Response, jsonify, redirect, request
+from flask import Flask, Response, jsonify, redirect, request, url_for
 from twilio.jwt.access_token import AccessToken
 from twilio.jwt.access_token.grants import VoiceGrant
 from twilio.twiml.voice_response import Dial, VoiceResponse
@@ -25,8 +27,9 @@ IDENTITY = {"identity": ""}
 
 @app.route("/")
 def index():
+    ##return app.send_static_file("index.html")
     return app.send_static_file("index.html")
-
+    ## return render_template("department.html")
 
 @app.route("/token", methods=["GET"])
 def token():

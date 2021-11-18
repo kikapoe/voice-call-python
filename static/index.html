@@ -1,179 +1,739 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
 
-      .grid-container > div {
-        background-color: rgba(255, 255, 255, 0.8);
-        text-align: center;
-        padding: 20px 0;
-        font-size: 30px;
-      }
-      
-      .block {
-        display: block;
-        width: 100%; 
-        border: none;
-      //  background-image: linear-gradient(to bott, #6f6965, #fe4a40 );
-        background-color: #04AA6D;
-        border-radius: 25px;
-        color: white;
-        padding: 14px 28px;
-        font-size: 48px;
-        cursor: pointer;
-        text-align: center;
-      }
-      
-      .block:hover {
-        background-color: #ddd;
-        color: black;
-      }
-      
-      .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-gap: 10px;
-        padding: 10px;
-        height:550px;
-      }
-      
-      .grid-container > div {
-        text-align: center;
-        padding: 20px 0;
-        font-size: 30px;
-      }
-      
-      .item1 {
-        grid-column-end: 1;
-      }
-      
-      .btn1 {
-        grid-column-end: 2;
-      }
-      
-      .btn-block{
-        display: block; 
-        width: 50%; 
-        height: 30%;
-        border: none; 
-        background-color: #04AA6D;
-        border-radius: 25px;
-        color: white;
-        padding: 40px 28px;
-        font-size: 16px;
-        cursor: pointer;
-        text-align: center;
-      }
-      
-      .topic {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 3rem;
-      }
-      
-      .ss {
-        display: block;
-        justify-content: center;
-        align-items: center;
-        z-index: 100;
-        height: 1000;
-        width: 1000;
-      }
-      
-      </style>
-  </head>
-  <body>
-    <header>
-      <button id="startup-button">init()</button>
-    </header>
-  <h2 class="topic">SELECT THE DEPARTMENT</h2>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <main id="controls">
-      <section class="left-column" id="info" style="display:none">
-        <h2>Checking: Device Info</h2>
-        <div id="client-name"></div>
-        <div id="output-selection" class="hide">
-          <label>Ringtone Devices 
-             {#checklist of ringtone}</label>
-          <select id="ringtone-devices" multiple></select>
-          <label>Speaker Devices 
-            {#checklist of Speker}</label>
-          <select id="speaker-devices" multiple></select
-          ><br />
-         <button id="get-devices">prompt Check "Unknown" devices</button>
-        </div>
-      </section>
-      <section class="center-column">
-        <div class="grid-container">
-          <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/>
-          <button id="button-call" type="submit" class="item1 block">ACC</button>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
-          <button id="button-call" type="submit" class="item2 block">APQP</button>
+  <style>
+    .grid-container>div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
 
-          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
-          <button id="button-call" type="submit" class="item3 block">BPD</button>
+    .grid-header>div {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
 
-          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
-          <button id="button-call" type="submit" class="item4 block">CED</button>
+    /* each department */
+    .block {
+      display: block;
+      width: 100%;
+      height: 4rem;
+      border-image: linear-gradient(to bottom, #3da0fd, #2171ec);
+      border-image-slice: 1;
+      background-image: linear-gradient(to bottom, #1f78ee, #38a1fd);
+      box-shadow: 0px 7px 10px rgba(26, 26, 26, 0.6);
+      transform: translateY(-7px);
+      /* background-color: #17a2b8; */
+      border-radius: 10px;
+      /* padding: 14px 28px; */
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      justify-items: center;
+    }
 
-          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
-          <button id="button-call" type="submit" class="item5 block">CGD</button>
+    .block:hover {
+      background-image: linear-gradient(to bottom, #ddd, #ddd);
+      color: black;
+      border-image: linear-gradient(to bottom, #ddd, #ddd);
+      /* border-color: #ddd; */
+    }
 
-          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
-          <button id="button-call" type="submit" class="item6 block">EXE</button>
+    /* Departments */
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-row-gap: 4rem;
+      grid-column-gap: 1rem;
+      padding: 10px;
+      height: 550px;
+      justify-items: center;
+      align-items: center;
+      margin-top: 20px;
+      grid-template-columns: 200px repeat(4, 1fr) 200px;
+      /* set dimension size */
+      grid-template-rows: repeat(3, 40px);
+      /* set dimension size */
+    }
 
-          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
-          <button id="button-call" type="submit" class="item7 block">GAD</button>
+    .grid-container>div {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
 
-          <!-- <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/> -->
-          <button id="button-call" type="submit" class="item8 block">GDC</button>
+    .btn1 {
+      grid-column-end: 2;
+    }
 
-          <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/>
-          <button id="button-call" type="submit" class="item9 block">HRM</button>
+    .ss {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      height: 1000;
+      width: 1000;
+    }
 
-          <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/>
-          <button class="item10 block">ICT</button>
+    .logo-dial {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      caret-color: transparent;
+    }
 
-          <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/>
-          <button class="item11 block">LGS</button>
 
-          <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" style="display:none"/>
-          <button class="item12 block">MAD</button>
-        </div>
-        <div id="call-controls" class="hide">
-          <form style="display:none">
-            <input id="phone-number" type="text" placeholder="+66908916039" value="+66908916039" />
-            <button id="button-call" type="submit">Call</button>
-          </form>
-          <button id="button-hangup-outgoing" class="hide">Hang Up</button>
-          <div id="incoming-call" class="hide" style="display:none">
-            <h2>Incoming Call Controls</h2>
-            <p class="instructions">
-              Incoming Call from <span id="incoming-number"></span>
-            </p>
-            <button id="button-accept-incoming">Accept</button>
-            <button id="button-reject-incoming">Reject</button>
-            <button id="button-hangup-incoming" class="hide">Hangup</button>
+    #call-img-logo {
+      display: block;
+      height: 500px;
+      width: auto;
+      margin: auto;
+      margin-top: 60px;
+      caret-color: transparent;
+    }
+
+
+    .btn-end {
+      display: block;
+      border: none;
+      background-color: #d41f00;
+      border-radius: 40px;
+      color: white;
+      padding: 12.944px 103.554px;
+      font-size: 25.88854px;
+      cursor: pointer;
+      text-align: center;
+      justify-content: center;
+      margin: auto;
+    }
+
+    /* Previous */
+    .item-a {
+      grid-row-start: 1;
+      grid-row-end: 4;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+
+    /* Next */
+    .item-b {
+      grid-row-start: 1;
+      grid-row-end: 4;
+      grid-column-start: 6;
+      grid-column-end: 7;
+    }
+
+    #btkk-logo {
+      position: relative;
+      width: 200px;
+      margin: 2rem;
+      height: auto;
+    }
+
+    /* Header text */
+    .topic-text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      padding: 0;
+      margin: 2rem;
+    }
+
+    .vl {
+      border-left: 6px solid rgb(80, 80, 80);
+      height: auto;
+      margin: 2rem 0px 2rem 0px;
+    }
+
+    /* Header */
+    .header-topic {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      margin: 5rem 0px 4rem 0px;
+    }
+
+    .arrow {
+      height: 50px;
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="topic" class="header-topic">
+    <img id="btkk-logo" src="static/logo.png">
+    <div class="vl"></div>
+    <div class="topic-text-container">
+      <h2 class="topic">กรุณาเลือกแผนกที่คุณต้องการติดต่อ</h2>
+      <h2 class="topic">Please select the department you would like to contact.</h2>
+    </div>
+  </div>
+
+
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div id="btn-dep-1" class="grid-container">
+          <div class=" item-a ">
+            <img class="arrow" src="static/left-arrow.png" alt="">
           </div>
-          <div id="volume-indicators" class="hide" style="display:none">
-            <label>Mic Volume</label>
-            <div id="input-volume"></div>
-            <br /><br />
-            <label>Speaker Volume</label>
-            <div id="output-volume"></div>
+          <!-- #check list -->
+          <!-- Ok this ACC is working -->
+          <input id="phone-number" type="text" value="+66908916039" style="display:none" />
+          <button id="button-call" type="submit" class="block">ACC</button>
+
+          <button class=" block">APQP</button>
+          <button class=" block">BPD</button>
+          <button class=" block">CED</button>
+          <button class=" block">CGD</button>
+          <button class=" block">EXE</button>
+          <button class=" block">GAD</button>
+          <button class=" block">GDC</button>
+          <button class=" block">HRM</button>
+          <button class=" block">ICT</button>
+          <button class=" block">LGS</button>
+          <button class=" block">MAD</button>
+          <div class=" item-b">
+            <img class="arrow" src="static/right-arrow.png" alt="">
           </div>
         </div>
-      </section>
-      <section class="right-column" style="display:none">
-        <h2>Event Log</h2>
-        <div class="hide" id="log" ></div>
-      </section>
-    </main>
+      </div>
+      <div class="carousel-item">
+        <div id="btn-dep-2" class="grid-container">
+          <div class=" item-a ">
+            <img class="arrow" src="static/left-arrow.png" alt="">
+          </div>
+          <button class=" block" onclick="dial()">MTN</button>
+          <button class=" block">PCS</button>
+          <button class=" block">PED</button>
+          <button class=" block">PCL</button>
+          <button class=" block">PSD</button>
+          <button class=" block">PUR</button>
+          <button class=" block">QAD</button>
+          <button class=" block">QCD</button>
+          <button class=" block">QMS</button>
+          <button class=" block">RND</button>
+          <button class=" block">SHE</button>
+          <button class=" block">SNM</button>
+          <div class=" item-b">
+            <img class="arrow" src="static/right-arrow.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div id="btn-dep-3" class="grid-container">
+          <div class=" item-a ">
+            <img class="arrow" src="static/left-arrow.png" alt="">
+          </div>
+          <button class=" block" onclick="dial()">TLD</button>
+          <button class=" block">TPM</button>
+          <button class=" block">UTT</button>
+          <button class=" block">PD1</button>
+          <button class=" block">PD2</button>
+          <button class=" block">PD3</button>
+          <button class=" block">PD4</button>
+          <button class=" block">PD5</button>
+          <button class=" block">PD7</button>
+          <div class=" item-b">
+            <img class="arrow" src="static/right-arrow.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span> -->
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span> -->
+    </a>
+  </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="static/twilio.min.js"></script>
-    <script src="static/quickstart.js"></script>
-  </body>
+  <div id='call-img' class="logo-dial">
+    <img id='call-img-logo' src="/static/ring_ring.gif">
+  </div>
+
+  <div style="margin-top: 30px;">
+    <button id="button-hangup-outgoing" class="btn-end">End Call</button>
+  </div>
+
+
+  <!-- Init button is here !! -->
+  <header>
+    <button id="startup-button" >Start up the Device</button>
+  </header>
+  <main id="controls">
+    <section class="left-column" id="info">
+      <h2>Your Device Info</h2>
+      <div id="client-name"></div>
+      <div id="output-selection" class="hide">
+        <label>Ringtone Devices</label>
+        <select id="ringtone-devices" multiple></select>
+        <label>Speaker Devices</label>
+        <select id="speaker-devices" multiple></select><br />
+        <button id="get-devices" >Seeing "Unknown" devices?</button>
+      </div>
+    </section>
+    <section class="center-column">
+      <h2 class="instructions">Make a Call</h2>
+      <div id="call-controls" class="hide">
+        <form>
+          <label for="phone-number" style="display:none">Enter a phone number or client name</label>
+          <input id="phone-number" type="text" value="+66908916039" />
+          <!-- <button id="button-call" type="submit">Call</button> -->
+        </form>
+        <button id="button-hangup-outgoing" class="hide">Hang Up</button>
+        <div id="incoming-call" class="hide" style="display:none">
+          <p class="instructions">
+            Incoming Call from <span id="incoming-number"></span>
+          </p>
+          <button id="button-accept-incoming">Accept</button>
+          <button id="button-reject-incoming">Reject</button>
+          <button id="button-hangup-incoming" class="hide">Hangup</button>
+        </div>
+        <div id="volume-indicators" class="hide" style="display:none">
+          <label>Mic Volume</label>
+          <div id="input-volume"></div>
+          <br /><br />
+          <label>Speaker Volume</label>
+          <div id="output-volume"></div>
+        </div>
+      </div>
+    </section>
+    <section class="right-column">
+      <h2>Event Log</h2>
+      <div class="hide" id="log"></div>
+    </section>
+  </main>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Display Calling -->
+
+  <script type="text/javascript">
+
+    window.onload = function () {
+      document.getElementById('call-img').style.display = "none";
+      document.getElementById('button-hangup-outgoing').style.display = "none";
+      var scriptTag = document.createElement("script");
+      scriptTag.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js";
+      document.getElementsByTagName("head")[0].appendChild(scriptTag);
+    }
+  </script>
+
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+
+  <script type="text/javascript" src="static/twilio.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="static/twilio.min.js"></script>
+  <!-- <script src="static/quickstart.js"></script> -->
+  <!-- Auto Initial is completed -->
+
+  <!-- 
+<script>
+    function dial() {
+      var topic = document.getElementById("topic");
+      var dep1 = document.getElementById("btn-dep-1");
+      var dep2 = document.getElementById("btn-dep-2");
+      var dep3 = document.getElementById("btn-dep-3");
+      var ini = document.getElementById("ini-btn");
+      var end = document.getElementById("button-hangup-outgoing");
+      var body = document.getElementsByTagName("body")[0];
+      topic.style.display = "none";
+      dep1.style.display = "none";
+      dep2.style.display = "none";
+      dep3.style.display = "none";
+      ini.style.display = "none";
+      end.style.display = "block";
+      body.style.backgroundColor = "#2973d9";
+      document.getElementById('call-img').style.display = "block";
+
+    }
+  </script> -->
+
+
+  <script>
+
+    $(function () {
+
+
+      const speakerDevices = document.getElementById("speaker-devices");
+      const ringtoneDevices = document.getElementById("ringtone-devices");
+      const outputVolumeBar = document.getElementById("output-volume");
+      const inputVolumeBar = document.getElementById("input-volume");
+      const volumeIndicators = document.getElementById("volume-indicators");
+      const callButton = document.getElementById("button-call");
+      const outgoingCallHangupButton = document.getElementById("button-hangup-outgoing");
+      const callControlsDiv = document.getElementById("call-controls");
+      const audioSelectionDiv = document.getElementById("output-selection");
+      const getAudioDevicesButton = document.getElementById("get-devices");
+      const logDiv = document.getElementById("log");
+      const incomingCallDiv = document.getElementById("incoming-call");
+      const incomingCallHangupButton = document.getElementById(
+        "button-hangup-incoming"
+      );
+      const incomingCallAcceptButton = document.getElementById(
+        "button-accept-incoming"
+      );
+      const incomingCallRejectButton = document.getElementById(
+        "button-reject-incoming"
+      );
+      const phoneNumberInput = document.getElementById("phone-number");
+      const incomingPhoneNumberEl = document.getElementById("incoming-number");
+      const startupButton = document.getElementById("startup-button"); //need to click on load
+
+      let device;
+      let token;
+
+      // Event Listeners
+
+      //document.onload = function(){
+      //const startupButton = document.getElementById("startup-button"); //need to click on load
+      //$('#startupButton').click();
+      //console.log('sdads');
+      //}
+
+      callButton.onclick = (e) => {
+        e.preventDefault();
+        makeOutgoingCall();
+      };
+      getAudioDevicesButton.onclick = getAudioDevices;
+      speakerDevices.addEventListener("change", updateOutputDevice);
+      ringtoneDevices.addEventListener("change", updateRingtoneDevice);
+
+      // SETUP STEP 1:
+      // Browser client should be started after a user gesture
+      // to avoid errors in the browser console re: AudioContext
+
+      //window.onload = (startupClient);
+      startupButton.addEventListener("click", startupClient);
+
+      // SETUP STEP 2: Request an Access Token
+      async function startupClient() {
+        log("Requesting Access Token...");
+
+        try {
+          const data = await $.getJSON("/token");
+          log("Got a token.");
+          token = data.token;
+          setClientNameUI(data.identity);
+          intitializeDevice();
+        } catch (err) {
+          console.log(err);
+          log("An error occurred. See your browser console for more information.");
+        }
+      }
+
+      // SETUP STEP 3:
+      // Instantiate a new Twilio.Device
+      function intitializeDevice() {
+        logDiv.classList.remove("hide");
+        log("Initializing device");
+        device = new Twilio.Device(token, {
+          debug: true,
+          answerOnBridge: true,
+          // Set Opus as our preferred codec. Opus generally performs better, requiring less bandwidth and
+          // providing better audio quality in restrained network conditions. Opus will be default in 2.0.
+          codecPreferences: ["opus", "pcmu"],
+        });
+
+        addDeviceListeners(device);
+
+        // Device must be registered in order to receive incoming calls
+        device.register();
+      }
+
+      // SETUP STEP 4:
+      // Listen for Twilio.Device states
+      function addDeviceListeners(device) {
+        device.on("registered", function () {
+          log("Twilio.Device Ready to make and receive calls!");
+          callControlsDiv.classList.remove("hide");
+        });
+
+        device.on("error", function (error) {
+          log("Twilio.Device Error: " + error.message);
+        });
+
+        device.on("incoming", handleIncomingCall);
+
+        device.audio.on("deviceChange", updateAllAudioDevices.bind(device));
+
+        // Show audio selection UI if it is supported by the browser.
+        if (device.audio.isOutputSelectionSupported) {
+          audioSelectionDiv.classList.remove("hide");
+        }
+      }
+
+      // MAKE AN OUTGOING CALL
+
+      async function makeOutgoingCall() {
+            const topic = document.getElementById("topic");
+            const dep1 = document.getElementById("btn-dep-1");
+            const dep2 = document.getElementById("btn-dep-2");
+            const dep3 = document.getElementById("btn-dep-3");
+
+            const end = document.getElementById("button-hangup-outgoing");
+            const body = document.getElementsByTagName("body")[0];
+            topic.style.display = "none";
+            dep1.style.display = "none";
+            dep2.style.display = "none";
+            dep3.style.display = "none";
+
+            end.style.display = "block";
+            body.style.backgroundColor = "#2973d9";
+            document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: phoneNumberInput.value,
+        };
+
+
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            window.open('http://google.com','_blank').focus();
+            close();
+            
+            
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      function updateUIAcceptedOutgoingCall(call) {
+        log("Call in progress ...");
+        callButton.disabled = true;
+        outgoingCallHangupButton.classList.remove("hide");
+        volumeIndicators.classList.remove("hide");
+        bindVolumeIndicators(call);
+      }
+
+      function updateUIDisconnectedOutgoingCall() {
+        log("Call disconnected.");
+        callButton.disabled = false;
+        outgoingCallHangupButton.classList.add("hide");
+        volumeIndicators.classList.add("hide");
+      }
+
+      // HANDLE INCOMING CALL
+
+      function handleIncomingCall(call) {
+        log(`Incoming call from ${call.parameters.From}`);
+
+        //show incoming call div and incoming phone number
+        incomingCallDiv.classList.remove("hide");
+        incomingPhoneNumberEl.innerHTML = call.parameters.From;
+
+        //add event listeners for Accept, Reject, and Hangup buttons
+        incomingCallAcceptButton.onclick = () => {
+          acceptIncomingCall(call);
+        };
+
+        incomingCallRejectButton.onclick = () => {
+          rejectIncomingCall(call);
+        };
+
+        incomingCallHangupButton.onclick = () => {
+          hangupIncomingCall(call);
+        };
+
+        // add event listener to call object
+        call.on("cancel", handleDisconnectedIncomingCall);
+        call.on("disconnect", handleDisconnectedIncomingCall);
+        call.on("reject", handleDisconnectedIncomingCall);
+      }
+
+      // ACCEPT INCOMING CALL
+
+      function acceptIncomingCall(call) {
+        call.accept();
+
+        //update UI
+        log("Accepted incoming call.");
+        incomingCallAcceptButton.classList.add("hide");
+        incomingCallRejectButton.classList.add("hide");
+        incomingCallHangupButton.classList.remove("hide");
+      }
+
+      // REJECT INCOMING CALL
+
+      function rejectIncomingCall(call) {
+        call.reject();
+        log("Rejected incoming call");
+        resetIncomingCallUI();
+      }
+
+      // HANG UP INCOMING CALL
+
+      function hangupIncomingCall(call) {
+        call.disconnect();
+        log("Hanging up incoming call");
+        resetIncomingCallUI();
+      }
+
+      // HANDLE CANCELLED INCOMING CALL
+
+      function handleDisconnectedIncomingCall() {
+        log("Incoming call ended.");
+        resetIncomingCallUI();
+      }
+
+      // MISC USER INTERFACE
+
+      // Activity log
+      function log(message) {
+        logDiv.innerHTML += `<p class="log-entry">&gt;&nbsp; ${message} </p>`;
+        logDiv.scrollTop = logDiv.scrollHeight;
+      }
+
+      function setClientNameUI(clientName) {
+        var div = document.getElementById("client-name");
+        div.innerHTML = `Your client name: <strong>${clientName}</strong>`;
+      }
+
+      function resetIncomingCallUI() {
+        incomingPhoneNumberEl.innerHTML = "";
+        incomingCallAcceptButton.classList.remove("hide");
+        incomingCallRejectButton.classList.remove("hide");
+        incomingCallHangupButton.classList.add("hide");
+        incomingCallDiv.classList.add("hide");
+      }
+
+      // AUDIO CONTROLS
+
+      async function getAudioDevices() {
+        await navigator.mediaDevices.getUserMedia({ audio: true });
+        updateAllAudioDevices.bind(device);
+      }
+
+      function updateAllAudioDevices() {
+        if (device) {
+          updateDevices(speakerDevices, device.audio.speakerDevices.get());
+          updateDevices(ringtoneDevices, device.audio.ringtoneDevices.get());
+        }
+      }
+
+      function updateOutputDevice() {
+        const selectedDevices = Array.from(speakerDevices.children)
+          .filter((node) => node.selected)
+          .map((node) => node.getAttribute("data-id"));
+
+        device.audio.speakerDevices.set(selectedDevices);
+      }
+
+      function updateRingtoneDevice() {
+        const selectedDevices = Array.from(ringtoneDevices.children)
+          .filter((node) => node.selected)
+          .map((node) => node.getAttribute("data-id"));
+
+        device.audio.ringtoneDevices.set(selectedDevices);
+      }
+
+      function bindVolumeIndicators(call) {
+        call.on("volume", function (inputVolume, outputVolume) {
+          var inputColor = "red";
+          if (inputVolume < 0.5) {
+            inputColor = "green";
+          } else if (inputVolume < 0.75) {
+            inputColor = "yellow";
+          }
+
+          inputVolumeBar.style.width = Math.floor(inputVolume * 300) + "px";
+          inputVolumeBar.style.background = inputColor;
+
+          var outputColor = "red";
+          if (outputVolume < 0.5) {
+            outputColor = "green";
+          } else if (outputVolume < 0.75) {
+            outputColor = "yellow";
+          }
+
+          outputVolumeBar.style.width = Math.floor(outputVolume * 300) + "px";
+          outputVolumeBar.style.background = outputColor;
+        });
+      }
+
+      // Update the available ringtone and speaker devices
+      function updateDevices(selectEl, selectedDevices) {
+        selectEl.innerHTML = "";
+
+        device.audio.availableOutputDevices.forEach(function (device, id) {
+          var isActive = selectedDevices.size === 0 && id === "default";
+          selectedDevices.forEach(function (device) {
+            if (device.deviceId === id) {
+              isActive = true;
+            }
+          });
+
+          var option = document.createElement("option");
+          option.label = device.label;
+          option.setAttribute("data-id", id);
+          if (isActive) {
+            option.setAttribute("selected", "selected");
+          }
+          selectEl.appendChild(option);
+        });
+      }
+    });
+
+  </script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#startup-button").click();
+  });
+</script>
+
+</body>
+
 </html>
