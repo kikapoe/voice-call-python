@@ -318,7 +318,7 @@
         </div>
       </div>
     </section>
-    <section class="right-column" style="display: none">
+    <section class="right-column">
       <h2>Event Log</h2>
       <div class="hide" id="log"></div>
     </section>
@@ -755,12 +755,16 @@
         volumeIndicators.classList.remove("hide");
         bindVolumeIndicators(call);
       }
-
+        //ต้องวางสาย แล้ว redic --> ตาขยับ
       function updateUIDisconnectedOutgoingCall() {
         log("Call disconnected.");
         callButton.disabled = false;
         outgoingCallHangupButton.classList.add("hide");
         volumeIndicators.classList.add("hide");
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+        location.reload();
+
       }
 
       // HANDLE INCOMING CALL
