@@ -60,7 +60,7 @@
       height: 300px;
       justify-items: center;
       align-items: center;
-      margin-top: 5px;
+      margin-top: 20px;
       grid-template-columns: 200px repeat(4, 1fr) 200px;
       /* set dimension size */
       grid-template-rows: repeat(3, 40px);
@@ -162,7 +162,7 @@
       display: flex;
       justify-content: center;
       flex-direction: row;
-      margin: 5rem 0px 4rem 0px;
+      margin: 10rem 0px 4rem 0px;
     }
 
     .arrow {
@@ -170,12 +170,11 @@
       width: auto;
     }
 
-    body {
-    }
+    body {}
   </style>
 </head>
 
-<body> 
+<body>
   <div id="topic" class="header-topic">
     <img id="btkk-logo" src="static/logo.png">
     <div class="vl"></div>
@@ -194,20 +193,45 @@
             <img class="arrow" src="static/left-arrow.png" alt="">
           </div>
           <!-- #check list -->
-          <!-- Ok this row is working -->
-          <input id="phone-number" type="text" value="+66908916039" style="display:none" />
-          <button id="button-call" type="submit" class="block">ACC</button>
-          <button id ="APQP" class=" block">APQP</button>
-          <button id ="BPD" class=" block">BPD</button>
-          <button id ="CED" class=" block">CED</button>
-          <button id ="CGD" class=" block">CGD</button>
-          <button id ="EXE" class=" block">EXE</button>
-          <button id ="GAD" class=" block">GAD</button>
-          <button id ="GDC" class=" block">GDC</button>
-          <button id ="HRM" class=" block">HRM</button>
-          <button id ="ICT" class=" block">ICT</button>
-          <button id ="LGS" class=" block">LGS</button>
-          <button id ="MAD" class=" block">MAD</button>
+          <!-- 038109360 to +6638109360;ext=0001-->
+
+
+            <!-- GA AC MA GDC PE CE UT QC TPM QA S&M SHE -->
+          <input id="GA-number" type="text" value="+6638109360x203" style="display:none" />
+          <button id="GA" type="submit" class="block">GA</button>
+
+          <input id="AC-number" type="text" value="+6638109360x212" style="display:none" />
+          <button id="AC" class=" block">AC</button>
+
+          <input id="MA-number" type="text" value="+6638109360x241" style="display:none" />
+          <button id="MA" class=" block">MA</button>
+
+          <input id="GDC-number" type="text" value="+6638109360x260" style="display:none" />
+          <button id="GDC" class=" block">GDC</button>
+
+          <input id="PE-number" type="text" value="+6638109360x264" style="display:none" />
+          <button id="PE" class=" block">PE</button>
+
+          <input id="CE-number" type="text" value="+6638109360x290" style="display:none" />
+          <button id="CE" class=" block">CE</button>
+
+          <input id="UT-number" type="text" value="+6638109360x352" style="display:none" />
+          <button id="UT" class=" block">UT</button>
+
+          <input id="QC-number" type="text" value="+6638109360x334" style="display:none" />
+          <button id="QC" class=" block">QC</button>
+
+          <input id="TPM-number" type="text" value="+6638109360x361" style="display:none" />
+          <button id="TPM" class=" block">TPM</button>
+
+          <input id="QA-number" type="text" value="+6638109360x301" style="display:none" />
+          <button id="QA" class=" block">QA</button>
+
+          <input id="S&M-number" type="text" value="+6638109360x372" style="display:none" />
+          <button id="S&M" class=" block">S&M</button>
+
+          <input id="SHE-number" type="text" value="+6638109360x281" style="display:none" />
+          <button id="SHE" class=" block">SHE</button>
           <div class=" item-b">
             <img class="arrow" src="static/right-arrow.png" alt="">
           </div>
@@ -218,44 +242,40 @@
           <div class=" item-a ">
             <img class="arrow" src="static/left-arrow.png" alt="">
           </div>
-          <!--MTN  PCS PED PCL PSD PUR QAD QCD QMS RND SHE SNM-->
-          <button id="MTN" class=" block">MTN</button>
-          <button id="PCS" class=" block">PCS</button>
-          <button id="PED" class=" block">PED</button>
-          <button id="PCL" class=" block">PCL</button>
-          <button id="PSD" class=" block">PSD</button>
-          <button id="PUR" class=" block">PUR</button>
-          <button id="QAD" class=" block">QAD</button>
-          <button id="QCD" class=" block">QCD</button>
+          <!-- PU QMS PLANNING RECEVING SHIPMENT TOOLING MST TBKT OPERATOR -->
+          <input id="PU-number" type="text" value="+6638109360x342" style="display:none" />
+          <button id="PU" class=" block">PU</button>
+
+          <input id="QMS-number" type="text" value="+6638109360x362" style="display:none" />
           <button id="QMS" class=" block">QMS</button>
-          <button id="RND" class=" block">RND</button>
-          <button id="SHE" class=" block">SHE</button>
-          <button id="SNM" class=" block">SNM</button>
+
+          <input id="PLANNING-number" type="text" value="+6638109360x324" style="display:none" />
+          <button id="PLANNING" class=" block">PLANNING</button>
+
+          <input id="RECEVING-number" type="text" value="+6638109360x401" style="display:none" />
+          <button id="RECEVING" class=" block">RECEVING</button>
+
+          <input id="SHIPMENT-number" type="text" value="+6638109360x402" style="display:none" />
+          <button id="SHIPMENT" class=" block">SHIPMENT</button>
+
+          <input id="TOOLING-number" type="text" value="+6638109360x406" style="display:none" />
+          <button id="TOOLING" class=" block">TOOLING</button>
+
+          <input id="MST-number" type="text" value="+6638109360x670" style="display:none" />
+          <button id="MST" class=" block">MST</button>
+
+          <input id="TBKT-number" type="text" value="+6638109360x326" style="display:none" />
+          <button id="TBKT" class=" block">TBKT</button>
+
+          <input id="OPERATOR-number" type="text" value="+6638109360" style="display:none" />
+          <button id="OPERATOR" class=" block">OPERATOR</button>
+
           <div class=" item-b">
             <img class="arrow" src="static/right-arrow.png" alt="">
           </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <div id="btn-dep-3" class="grid-container">
-          <div class=" item-a ">
-            <img class="arrow" src="static/left-arrow.png" alt="">
-          </div>
-          <!-- TLD TPM  UTT PD1 PD2 PD3 PD4 PD5 PD7-->
-          <button id="TLD" class=" block">TLD</button>
-          <button id="TPM" class=" block">TPM</button>
-          <button id="UTT" class=" block">UTT</button>
-          <button id="PD1" class=" block">PD1</button>
-          <button id="PD2" class=" block">PD2</button>
-          <button id="PD3" class=" block">PD3</button>
-          <button id="PD4" class=" block">PD4</button>
-          <button id="PD5" class=" block">PD5</button>
-          <button id="PD7" class=" block">PD7</button>
-          <div class=" item-b">
-            <img class="arrow" src="static/right-arrow.png" alt="">
-          </div>
-        </div>
-      </div>
+      
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
       <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -289,17 +309,13 @@
         <select id="ringtone-devices" multiple></select>
         <label>Speaker Devices</label>
         <select id="speaker-devices" multiple></select><br />
-        <button id="get-devices" >Seeing "Unknown" devices?</button>
+        <button id="get-devices">Seeing "Unknown" devices?</button>
       </div>
     </section>
     <section class="center-column" style="display: none">
       <h2 class="instructions">Make a Call</h2>
       <div id="call-controls" class="hide">
-        <form>
-          <label for="phone-number" style="display:none">Enter a phone number or client name</label>
-          <input id="phone-number" type="text" value="+66908916039" />
-          <!-- <button id="button-call" type="submit">Call</button> -->
-        </form>
+
         <button id="button-hangup-outgoing" class="hide">Hang Up</button>
         <div id="incoming-call" class="hide" style="display:none">
           <p class="instructions">
@@ -318,7 +334,7 @@
         </div>
       </div>
     </section>
-    <section class="right-column">
+    <section class="right-column" style="display:none">
       <h2>Event Log</h2>
       <div class="hide" id="log"></div>
     </section>
@@ -363,79 +379,83 @@
   <!-- <script src="static/quickstart.js"></script> -->
   <!-- Auto Initial is completed -->
 
-  <!-- 
-<script>
-    function dial() {
-      var topic = document.getElementById("topic");
-      var dep1 = document.getElementById("btn-dep-1");
-      var dep2 = document.getElementById("btn-dep-2");
-      var dep3 = document.getElementById("btn-dep-3");
-      var ini = document.getElementById("ini-btn");
-      var end = document.getElementById("button-hangup-outgoing");
-      var body = document.getElementsByTagName("body")[0];
-      topic.style.display = "none";
-      dep1.style.display = "none";
-      dep2.style.display = "none";
-      dep3.style.display = "none";
-      ini.style.display = "none";
-      end.style.display = "block";
-      body.style.backgroundColor = "#2973d9";
-      document.getElementById('call-img').style.display = "block";
 
-    }
-  </script> -->
 
 
   <script>
-
     $(function () {
-
       // get varable all buttons
-      // <!-- APQP BPD CED CGD EXE GAD GDC HRM ICT LGS MAD-->
-      const APQP = document.getElementById("APQP");
-      const BPD = document.getElementById("BPD");
-      const CED = document.getElementById("CED");
-      const CGD = document.getElementById("CGD");
-      const EXE = document.getElementById("EXE");
-      const GAD = document.getElementById("GAD");
+      // <!-- GA AC MA GDC PE CE UT QC TPM QA S&M SHE -->
+      const GANumberInput = document.getElementById("GA-number");
+      const GA = document.getElementById("GA");
+
+      const ACNumberInput = document.getElementById("AC-number");
+      const AC = document.getElementById("AC");
+
+      const MANumberInput = document.getElementById("MA-number");
+      const MA = document.getElementById("MA");
+
+      const GPCNumberInput = document.getElementById("GDC-number");
       const GDC = document.getElementById("GDC");
-      const HRM = document.getElementById("HRM");
-      const ICT = document.getElementById("ICT");
-      const LGS = document.getElementById("LGS");
-      const MAD = document.getElementById("MAD");
 
-      // <!--MTN  PCS PED PCL PSD PUR QAD QCD QMS RND SHE SNM-->
-      const MTN = document.getElementById("MTN");
-      const PCS = document.getElementById("PCS");
-      const PED = document.getElementById("PED");
-      const PCL = document.getElementById("PCL");
-      const PSD = document.getElementById("PSD");
-      const PUR = document.getElementById("PUR");
-      const QAD = document.getElementById("QAD");
-      const QCD = document.getElementById("QCD");
-      const QMS = document.getElementById("QMS");
-      const RND = document.getElementById("RND");
-      const SHE = document.getElementById("SHE");
-      const SNM = document.getElementById("SNM");
+      const PENumberInput = document.getElementById("PE-number");
+      const PE = document.getElementById("PE");
 
-      // <!-- TLD TPM  UTT PD1 PD2 PD3 PD4 PD5 PD7-->
-      const TLD = document.getElementById("TLD");
+      const CENumberInput = document.getElementById("CE-number");
+      const CE = document.getElementById("CE");
+
+      const UTNumberInput = document.getElementById("UT-number");
+      const UT = document.getElementById("UT");
+
+      const QCNumberInput = document.getElementById("QC-number");
+      const QC = document.getElementById("QC");
+
+      const TPMNumberInput = document.getElementById("TPM-number");
       const TPM = document.getElementById("TPM");
-      const UTT = document.getElementById("UTT");
-      const PD1 = document.getElementById("PD1");
-      const PD2 = document.getElementById("PD2");
-      const PD3 = document.getElementById("PD3");
-      const PD4 = document.getElementById("PD4");
-      const PD5 = document.getElementById("PD5");
-      const PD7 = document.getElementById("PD7");
-   
+
+      const QANumberInput = document.getElementById("QA-number");
+      const QA = document.getElementById("QA");
+
+      const SMNumberInput = document.getElementById("S&M-number");
+      const SM = document.getElementById("S&M");
+
+      const SHENumberInput = document.getElementById("SHE-number");
+      const SHE = document.getElementById("SHE");
+
+      // <!-- PU QMS PLANNING RECEVING SHIPMENT TOOLING MST TBKT OPERATOR -->
+      const PUNumberInput = document.getElementById("PU-number");
+      const PU = document.getElementById("PU");
+
+      const QMSNumberInput = document.getElementById("QMS-number");
+      const QMS = document.getElementById("QMS");
+
+      const PLANNINGNumberInput = document.getElementById("PLANNING-number");
+      const PLANNING = document.getElementById("PLANNING");
+
+      const RECEVINGNumberInput = document.getElementById("RECEVING-number");
+      const RECEVING = document.getElementById("RECEVING");
+
+      const SHIPMENTNumberInput = document.getElementById("SHIPMENT-number");
+      const SHIPMENT = document.getElementById("SHIPMENT");
+
+      const TOOLINGNumberInput = document.getElementById("TOOLING-number");
+      const TOOLING = document.getElementById("TOOLING");
+
+      const MSTNumberInput = document.getElementById("MST-number");
+      const MST = document.getElementById("MST");
+
+      const TBKTNumberInput = document.getElementById("TBKT-number");
+      const TBKT = document.getElementById("TBKT");
+
+      const OPERATORNumberInput = document.getElementById("OPERATOR-number");
+      const OPERATOR = document.getElementById("OPERATOR");
+
       // varaiables other buttons
       const speakerDevices = document.getElementById("speaker-devices");
       const ringtoneDevices = document.getElementById("ringtone-devices");
       const outputVolumeBar = document.getElementById("output-volume");
       const inputVolumeBar = document.getElementById("input-volume");
       const volumeIndicators = document.getElementById("volume-indicators");
-      const callButton = document.getElementById("button-call");
       const outgoingCallHangupButton = document.getElementById("button-hangup-outgoing");
       const callControlsDiv = document.getElementById("call-controls");
       const audioSelectionDiv = document.getElementById("output-selection");
@@ -451,7 +471,6 @@
       const incomingCallRejectButton = document.getElementById(
         "button-reject-incoming"
       );
-      const phoneNumberInput = document.getElementById("phone-number");
       const incomingPhoneNumberEl = document.getElementById("incoming-number");
       const startupButton = document.getElementById("startup-button"); //need to click on load
 
@@ -459,168 +478,112 @@
       let token;
 
       // Event Listeners
-      // <!-- APQP BPD CED CGD EXE GAD GDC HRM ICT LGS MAD-->
-      callButton.onclick = (e) => {
+      // <!-- GA AC MA GDC PE CE UT QC TPM QA S&M SHE -->
+      GA.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
+        GACall();
       };
 
-      APQP.onclick = (e) => {
+      AC.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
+        ACCall();
       };
 
-
-      BPD.onclick = (e) => {
+      MA.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
-      };
-
-      CED.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
-      };
-
-      EXE.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
-      };
-
-      GAD.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
+        MACall();
       };
 
       GDC.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
+        GPCCall();
       };
 
-      HRM.onclick = (e) => {
+      PE.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
+        PECall();
       };
 
-      ICT.onclick = (e) => {
+      CE.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
+        CECall();
       };
 
-      LGS.onclick = (e) => {
+      UT.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
+        UTCall();
       };
 
-      MAD.onclick = (e) => {
+      QC.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
-      };
-    // <!--MTN  PCS PED PCL PSD PUR QAD QCD QMS RND SHE SNM-->
-      MTN.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
+        QCCall();
       };
 
-      PCS.onclick = (e) => {
+      TPM.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
+        TPMCall();
       };
 
-      PED.onclick = (e) => {
+      QA.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
+        QACall();
+      };
+
+      SM.onclick = (e) => {
+        e.preventDefault();
+        SMCall();
+      };
+
+      SHE.onclick = (e) => {
+        e.preventDefault();
+        SHECall();
       };
       
-      PCL.onclick = (e) => {
+      
+      // <!-- PU QMS PLANNING RECEVING SHIPMENT TOOLING MST TBKT OPERATOR -->
+      PU.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
-      };
-
-      PSD.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
-      };
-
-      PUR.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
-      };
-
-      QAD.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
-      };
-
-      QCD.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
+        PUCall();
       };
 
       QMS.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
+        QMSCall();
       };
 
-      RND.onclick = (e) => {
+      PLANNING.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
-      };
-      
-      SHE.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
+        PLANNINGCall();
       };
 
-      SNM.onclick = (e) => {
+      RECEVING.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
+        RECEVINGCall();
       };
 
+      SHIPMENT.onclick = (e) => {
+        e.preventDefault();
+        SHIPMENTCall();
+      };
 
-     // <!-- TLD TPM  UTT PD1 PD2 PD3 PD4 PD5 PD7-->
-      TLD.onclick = (e) => {
+      TOOLING.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
+        TOOLINGCall();
       };
-      
-      TPM.onclick = (e) => {
+
+      MST.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
+        MSTCall();
       };
-      
-      UTT.onclick = (e) => {
+
+      TBKT.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall(); 
+        TBKTCall();
       };
-      
-      PD1.onclick = (e) => {
+
+      OPERATOR.onclick = (e) => {
         e.preventDefault();
-        makeOutgoingCall();
-      };
-      
-      PD2.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
-      };
-      
-      PD3.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
-      };
-      
-      PD4.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
-      };
-      
-      PD5.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
-      };
-      
-      PD7.onclick = (e) => {
-        e.preventDefault();
-        makeOutgoingCall();
+        OPERATORCall();
       };
 
 
@@ -691,33 +654,29 @@
           audioSelectionDiv.classList.remove("hide");
         }
       }
+      // <!-- MAKE AN OUTGOING CALL    -->
+      // <!-- GA AC MA GDC PE CE UT QC TPM QA S&M SHE -->
+      //1 GA
+      async function GACall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
 
-      // MAKE AN OUTGOING CALL
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
 
-      async function makeOutgoingCall() {
-            const topic = document.getElementById("topic");
-            const dep1 = document.getElementById("btn-dep-1");
-            const dep2 = document.getElementById("btn-dep-2");
-            const dep3 = document.getElementById("btn-dep-3");
-
-            const end = document.getElementById("button-hangup-outgoing");
-            const body = document.getElementsByTagName("body")[0];
-            topic.style.display = "none";
-            dep1.style.display = "none";
-            dep2.style.display = "none";
-            dep3.style.display = "none";
-
-            end.style.display = "block";
-            body.style.backgroundColor = "#2973d9";
-            document.getElementById('call-img').style.display = "block";
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
 
 
         var params = {
           // get the phone number to call from the DOM
-          To: phoneNumberInput.value,
+          To: GANumberInput.value,
         };
-
-
 
 
         if (device) {
@@ -740,7 +699,58 @@
             //close();
             location.reload();
             close();
-            
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+      
+      ///2 AC
+      async function ACCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: ACNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
           };
 
         } else {
@@ -748,21 +758,991 @@
         }
       }
 
+      ///3 MA
+      async function MACall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: MANumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///4 GDC
+      async function GPCCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: GPCNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///5 PE
+      async function PECall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: PENumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///6 CE
+      async function CECall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: CENumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///7 UT
+      async function UTCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: UTNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///8 QC
+      async function QCCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: QCNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///9 TPM
+      async function TPMCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: TPMNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///10 QA
+      async function QACall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: QANumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+      
+      ///11 S&M
+      async function SMCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: SMNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///12 SHE
+      async function SHECall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: SHENumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      // <!-- PU QMS PLANNING RECEVING SHIPMENT TOOLING MST TBKT OPERATOR -->
+      ///13 PU
+      async function PUCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: PUNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///14 QMS
+      async function QMSCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: QMSNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///15 PLANNING
+      async function PLANNINGCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: PLANNINGNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///16 RECEVING
+      async function RECEVINGCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: RECEVINGNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///17 SHIPMENT
+      async function SHIPMENTCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: SHIPMENTNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///18 TOOLING
+      async function TOOLINGCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: TOOLINGNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+      
+      ///19 MST
+      async function MSTCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: MSTNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///20 TBKT
+      async function TBKTCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: TBKTNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      ///21 OPERATOR
+      async function OPERATORCall() {
+        const topic = document.getElementById("topic");
+        const dep1 = document.getElementById("btn-dep-1");
+        const dep2 = document.getElementById("btn-dep-2");
+
+        const end = document.getElementById("button-hangup-outgoing");
+        const body = document.getElementsByTagName("body")[0];
+        topic.style.display = "none";
+        dep1.style.display = "none";
+        dep2.style.display = "none";
+
+        end.style.display = "block";
+        body.style.backgroundColor = "#2973d9";
+        document.getElementById('call-img').style.display = "block";
+
+
+        var params = {
+          // get the phone number to call from the DOM
+          To: OPERATORNumberInput.value,
+        };
+
+
+        if (device) {
+          log(`Attempting to call ${params.To} ...`);
+
+          // Twilio.Device.connect() returns a Call object
+          const call = await device.connect({ params });
+
+          // add listeners to the Call
+          // "accepted" means the call has finished connecting and the state is now "open"
+          call.on("accept", updateUIAcceptedOutgoingCall);
+          call.on("disconnect", updateUIDisconnectedOutgoingCall);
+          call.on("cancel", updateUIDisconnectedOutgoingCall);
+          call.on("reject", updateUIDisconnectedOutgoingCall);
+
+          outgoingCallHangupButton.onclick = () => {
+            log("Hanging up ...");
+            call.disconnect();
+            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+            //close();
+            location.reload();
+            close();
+
+          };
+
+        } else {
+          log("Unable to make call.");
+        }
+      }
+
+      
+
+      /// Ending Call Button !!
+
       function updateUIAcceptedOutgoingCall(call) {
         log("Call in progress ...");
-        callButton.disabled = true;
+        //callButton.disabled = true;
         outgoingCallHangupButton.classList.remove("hide");
         volumeIndicators.classList.remove("hide");
         bindVolumeIndicators(call);
       }
-        //ต้องวางสาย แล้ว redic --> ตาขยับ
+      //ต้องวางสาย แล้ว redic --> ตาขยับ
       function updateUIDisconnectedOutgoingCall() {
         log("Call disconnected.");
-        callButton.disabled = false;
+        //callButton.disabled = false;
         outgoingCallHangupButton.classList.add("hide");
         volumeIndicators.classList.add("hide");
-            //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
-            //close();
+        //window.open('https://noah-welcome.herokuapp.com/','_blank').focus();
+        //close();
         location.reload();
 
       }
@@ -930,11 +1910,11 @@
 
   </script>
 
-<script type="text/javascript">
-  $(document).ready(function () {
-    $("#startup-button").click();
-  });
-</script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#startup-button").click();
+    });
+  </script>
 
 </body>
 
